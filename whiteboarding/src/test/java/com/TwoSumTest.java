@@ -17,6 +17,8 @@ class TwoSumTest {
     void tearDown() {
     }
 
+
+    /** TwoSum Tests **/
     @Test
     void test_Get_Sums_Returns_Target() {
         int[] array = {7,3,2};
@@ -75,6 +77,7 @@ class TwoSumTest {
 
     }
 
+    /** Unique Pairs Tests **/
     @Test
     void test_unique_pairs_returns_expected() {
         int[] array = {1, 8, 3, 6};
