@@ -1,5 +1,6 @@
 package com.beginner;
 
+import com.beginner.utils.AnagramChecker;
 import org.junit.Assert;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -81,11 +82,49 @@ class StringManipulationTest {
         Assert.assertEquals("first character should be A", 'A', actual.substring(0, 1));
         Assert.assertEquals("last character should be B", 'B', actual.substring(actual.length() - 1));
     }
-    
+
     /** areAnagrams **/
 
     @Test
-    void areAnagrams() {
+    void areAnagrams_false() {
+        Boolean actual = stringManipulation.areAnagrams("banana", "apple");
+        Assert.assertFalse("banana and apple are not anagrams", actual);
+    }
+
+    @Test
+    void areAnagrams_true() {
+        Boolean actual = stringManipulation.areAnagrams("silent", "listen");
+        Assert.assertTrue("listen and silent are anagrams", actual);
+    }
+
+    @Test
+    void areAnagrams_one_character() {
+        Boolean actual = stringManipulation.areAnagrams("c", "c");
+        Assert.assertTrue("c and c are anagrams", actual);
+    }
+
+    @Test
+    void areAnagrams_empty_strings() {
+        Boolean actual = stringManipulation.areAnagrams("", "");
+        Assert.assertFalse("empty strings are not anagrams", actual);
+    }
+
+    @Test
+    void areAnagrams_using_spaces() {
+        Boolean actual = stringManipulation.areAnagrams("Tom Marvolo Riddle", "I am Lord Voldemort");
+        Assert.assertTrue("these sentences are anagrams", actual);
+    }
+
+    @Test
+    void areAnagrams_using_punctuation() {
+        Boolean actual = stringManipulation.areAnagrams("Tom Marvolo Riddle!", "I am Lord Voldemort!");
+        Assert.assertTrue("these sentences are anagrams", actual);
+    }
+
+    @Test
+    void areAnagrams_false_same_words_too_many_characters() {
+        Boolean actual = stringManipulation.areAnagrams("silent", "listenn");
+        Assert.assertFalse("silent and listenn with two nns are not anagrams", actual);
     }
 
     /** isValidParentheses **/
