@@ -71,5 +71,34 @@ public class ArraysAndLists {
         }
     }
 
+    /**
+     * This class includes problems that involve Arrays and Lists, 1D and 2D
+     **/
 
+    /**
+     * Challenge 6: Find the Maximum Value in a 2D Array
+     * Given a 2D array of integers, find and return the maximum value.
+     *
+     * @param grid The 2D array of integers.
+     * @return The maximum value in the 2D array.
+     */
+    public static int findMaxValueIn2DArray(int[][] grid) {
+        // TODO: Implement method stub
+        return 0;
+    }
+
+    /**
+     * Challenge 7: Search for a Value in a 2D Matrix
+     * Given a 2D matrix where rows and columns are sorted in ascending order, determine if a target value is present in the matrix.
+     *
+     * @param matrix The sorted 2D matrix.
+     * @param target The value to search for.
+     * @return True if the target value is found, false otherwise.
+     */
+    public static boolean searchIn2DMatrix(int[][] matrix, int target) {
+        // TODO: Implement method stub
+        return false;
+    }
 }
+
+
