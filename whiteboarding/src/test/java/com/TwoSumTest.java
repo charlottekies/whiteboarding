@@ -1,16 +1,17 @@
 package com;
 
+import com.beginner.ArraysAndLists;
 import org.junit.Assert;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class TwoSumTest {
-    private TwoSum getSums;
+    private ArraysAndLists getSums;
 
     @BeforeEach
     void setUp() {
-        getSums = new TwoSum();
+        getSums = new ArraysAndLists();
     }
 
     @AfterEach

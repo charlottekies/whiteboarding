@@ -1,12 +1,11 @@
-package com;
+package com.beginner;
 
 /**
- * This class includes problems that relate to the common TwoSum problem.
+ * This class includes problems that involve Arrays and Lists.
  * These challenges deal with finding pairs or sets of numbers in a collection that, when combined with a given operator, result in an expected target.
  **/
 
-public class TwoSum {
-
+public class ArraysAndLists {
 
     /*
         1. Two Sum
@@ -42,4 +41,39 @@ public class TwoSum {
         // TODO: Implement method stub
         return new int[0][0];
     }
+
+    /**
+     * Given an array of integers, find the maximum value in the array.
+     *
+     * @param nums The input array.
+     * @return The maximum value.
+     */
+    public int findMaxValue(int[] nums) {
+        // TODO: Implement method stub
+        return 0;
+    }
+
+    /**
+     * Given an array of integers and a target value, remove all instances of the target value in-place and return the new length of the array.
+     *
+     * @param nums   The input array.
+     * @param target The value to be removed.
+     * @return The new length of the array after removal.
+     */
+    public int removeElement(int[] nums, int target) {
+        // TODO: Implement method stub
+        return 0;
+    }
+
+    /**
+     * Given an array of integers, calculate the sum of all elements in the array.
+     *
+     * @param nums The input array.
+     * @return The sum of all elements.
+     */
+    public int calculateArraySum(int[] nums) {
+        // TODO: Implement method stub
+        return 0;
+    }
+
 }

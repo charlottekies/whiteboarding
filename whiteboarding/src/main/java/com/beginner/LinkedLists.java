@@ -1,4 +1,4 @@
-package com;
+package com.beginner;
 
 /**
  * These problems are designed to test your familiarity with the LinkedList datatype in Java
