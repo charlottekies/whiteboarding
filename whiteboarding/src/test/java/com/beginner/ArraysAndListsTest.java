@@ -1,17 +1,19 @@
-package com;
+package com.beginner;
 
-import com.beginner.ArraysAndLists;
 import org.junit.Assert;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class TwoSumTest {
-    private ArraysAndLists getSums;
+import static org.junit.jupiter.api.Assertions.*;
+
+class ArraysAndListsTest {
+
+    private com.beginner.ArraysAndLists getSums;
 
     @BeforeEach
     void setUp() {
-        getSums = new ArraysAndLists();
+        getSums = new com.beginner.ArraysAndLists();
     }
 
     @AfterEach
@@ -119,4 +121,21 @@ class TwoSumTest {
 
 //    Boundary Tests: Test the boundaries of your input space, including the maximum and minimum possible values for array elements and the target sum.
 
+
+    /** findMaxValueTests **/
+    @Test
+    void findMaxValue() {
+    }
+
+    /** removeElementTests **/
+
+    @Test
+    void removeElement() {
+    }
+
+    /** calculateArraySumTests **/
+
+    @Test
+    void calculateArraySum() {
+    }
 }
