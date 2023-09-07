@@ -1,6 +1,12 @@
 package com;
 
+/**
+ * This class includes problems that relate to the common TwoSum problem.
+ * These challenges deal with finding pairs or sets of numbers in a collection that, when combined with a given operator, result in an expected target.
+ **/
+
 public class TwoSum {
+
 
     /*
         1. Two Sum
