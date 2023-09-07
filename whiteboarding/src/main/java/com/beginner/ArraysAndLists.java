@@ -1,5 +1,7 @@
 package com.beginner;
 
+import java.util.List;
+
 /**
  * This class includes problems that involve Arrays and Lists.
  * These challenges deal with finding pairs or sets of numbers in a collection that, when combined with a given operator, result in an expected target.
@@ -75,5 +77,75 @@ public class ArraysAndLists {
         // TODO: Implement method stub
         return 0;
     }
+
+
+    /** LISTS **/
+
+    /**
+     * Given a list of integers, find the first two numbers that add up to a specific target sum.
+     *
+     * @param numbers The input list of integers.
+     * @param target  The target sum to find.
+     * @return A list containing the first two numbers that add up to the target sum, or an empty list if no such numbers are found.
+     */
+    public List<Integer> findTwoSum(List<Integer> numbers, int target) {
+        // TODO: Implement this method
+        return null;
+    }
+
+    /**
+     * Given a list of strings, reverse each string in the list and return the reversed list.
+     *
+     * @param strings The input list of strings to be reversed.
+     * @return The list of reversed strings.
+     */
+    public List<String> reverseStrings(List<String> strings) {
+        // TODO: Implement this method
+        return null;
+    }
+
+    /**
+     * Check if a given list of strings contains palindromes (strings that read the same forwards and backwards).
+     *
+     * @param strings The input list of strings to check.
+     * @return A list containing all the palindromes found in the input list.
+     */
+    public List<String> findPalindromes(List<String> strings) {
+        // TODO: Implement this method
+        return null;
+    }
+
+    /**
+     * Given a list of integers, find the maximum value in the list.
+     *
+     * @param numbers The input list of integers.
+     * @return The maximum value in the list.
+     */
+    public int findMaxValue(List<Integer> numbers) {
+        // TODO: Implement this method
+        return 0;
+    }
+
+    /**
+     * Remove all instances of a target value from a list of integers.
+     *
+     * @param numbers The input list of integers.
+     * @param target  The value to be removed.
+     */
+    public void removeElements(List<Integer> numbers, int target) {
+        // TODO: Implement this method
+    }
+
+    /**
+     * Calculate the sum of all elements in a list of integers.
+     *
+     * @param numbers The input list of integers.
+     * @return The sum of all elements in the list.
+     */
+    public int calculateListSum(List<Integer> numbers) {
+        // TODO: Implement this method
+        return 0;
+    }
+
 
 }

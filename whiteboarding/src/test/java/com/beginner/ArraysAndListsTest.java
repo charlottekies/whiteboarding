@@ -138,4 +138,38 @@ class ArraysAndListsTest {
     @Test
     void calculateArraySum() {
     }
+
+    /**** LIST tests ****/
+
+    /** twoSumListTests **/
+    @Test
+    void findTwoSum() {
+    }
+
+    /** reverseStringsListTests **/
+
+    @Test
+    void reverseStrings() {
+    }
+
+    /** findPalindromesListTest **/
+
+    @Test
+    void findPalindromes() {
+    }
+
+    /** findMaxValueInaListTests **/
+    @Test
+    void testFindMaxValue() {
+    }
+
+    /** removeElements tests **/
+    @Test
+    void removeElements() {
+    }
+
+    /** calculate list sum tests **/
+    @Test
+    void calculateListSum() {
+    }
 }
