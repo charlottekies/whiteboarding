@@ -63,8 +63,9 @@ class BitTest {
         Boolean actual = bit.isEven(smallNumber);
         Assert.assertFalse("the smallest number available is even.", actual);
     }
-    
+
     @Test
     void setNthBit() {
+        // TODO: Implement
     }
 }
