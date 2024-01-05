@@ -120,8 +120,9 @@ public class ArraysAndLists {
      *
      * @param numbers The input list of integers.
      * @return The maximum value in the list.
+     * @return 0 if there is no max value
      */
-    public int findMaxValue(List<Integer> numbers) {
+    public Integer findMaxValue(List<Integer> numbers) {
         // TODO: Implement this method
         return 0;
     }
@@ -132,8 +133,10 @@ public class ArraysAndLists {
      * @param numbers The input list of integers.
      * @param target  The value to be removed.
      */
-    public void removeElements(List<Integer> numbers, int target) {
+    public List<Integer> removeElements(List<Integer> numbers, Integer target) {
         // TODO: Implement this method
+
+        return null;
     }
 
     /**

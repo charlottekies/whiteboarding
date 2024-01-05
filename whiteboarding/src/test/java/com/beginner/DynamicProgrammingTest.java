@@ -83,6 +83,7 @@ class DynamicProgrammingTest {
         assertEquals(actual, expected);
     }
 
+    @Test
     void test_minCoins_invalid_input_throws_exception() {
         assertThrows(IllegalArgumentException.class, () -> dynamicProgramming.minCoins(new int[]{5, 10, 1, 1, 1, 5, 5, 5, 10, 10, 25, 25, 25, 25, 25, 25, 25, 5, 10, 10, 5, 5, 10, 1, 1}, 100));
     }

@@ -5,6 +5,12 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import static java.lang.Integer.valueOf;
+
 class ArraysAndListsTest {
 
     private com.beginner.ArraysAndLists arraysAndLists;
@@ -239,13 +245,219 @@ class ArraysAndListsTest {
 
     /** findMaxValueTests **/
     @Test
-    void findMaxValue() {
+    void test_findMaxValue_whenListContainsPositivesAndNegatives() {
+        List<Integer> numbers = new ArrayList<>();
+        Collections.addAll(numbers, 10, 20, 30, 40, 0, -1, 1000, -1000);
+
+        int expected = 1000;
+        int actual = arraysAndLists.findMaxValue(numbers);
+
+        Assert.assertEquals("1000 is the maximum value in this test list", expected, actual);
     }
 
-    /** removeElementTests **/
+    @Test
+    void test_findMaxValue_whenListIsEmpty() {
+        List<Integer> numbers = new ArrayList<>();
+
+        int expected = 0;
+        int actual = arraysAndLists.findMaxValue(numbers);
+
+        Assert.assertEquals("0 is the maximum value in this test list", expected, actual);
+    }
 
     @Test
-    void removeElement() {
+    void test_findMaxValue_whenListContainsZero() {
+        List<Integer> numbers = new ArrayList<>();
+        Collections.addAll(numbers, 0);
+
+        int expected = 0;
+        int actual = arraysAndLists.findMaxValue(numbers);
+
+        Assert.assertEquals("0 is the maximum value in this test list", expected, actual);
+    }
+
+    @Test
+    void test_findMaxValue_whenListContainsNegatives() {
+        List<Integer> numbers = new ArrayList<>();
+        Collections.addAll(numbers, -1,-2,-10000);
+
+        int expected = -10000;
+        int actual = arraysAndLists.findMaxValue(numbers);
+
+        Assert.assertEquals("-10000 is the maximum value in this test list", expected, actual);
+    }
+
+    @Test
+    void test_findMaxValue_whenListContains_HugeNumber() {
+        List<Integer> numbers = new ArrayList<>();
+        Collections.addAll(numbers, 1, Integer.MAX_VALUE);
+
+        Integer expected = Integer.MAX_VALUE;
+        Integer actual = arraysAndLists.findMaxValue(numbers);
+
+        Assert.assertEquals("2147483647 is the maximum value in this test list", expected, actual);
+    }
+
+
+    @Test
+    void test_findMaxValue_whenListContains_SmallestNumber() {
+        List<Integer> numbers = new ArrayList<>();
+        Collections.addAll(numbers, 1, Integer.MIN_VALUE);
+
+        Integer expected = Integer.MIN_VALUE;
+        Integer actual = arraysAndLists.findMaxValue(numbers);
+
+        Assert.assertEquals("-2147483647 is the maximum value in this test list", expected, actual);
+    }
+
+    @Test
+    void test_findMaxValue_whenListContains_duplicates() {
+        List<Integer> numbers = new ArrayList<>();
+        Collections.addAll(numbers, 1, 1, 0);
+
+        Integer expected = 1;
+        Integer actual = arraysAndLists.findMaxValue(numbers);
+
+        Assert.assertEquals("1 is the maximum value in this test list", expected, actual);
+    }
+
+    @Test
+    void test_findMaxValue_withLargeList() {
+        List<Integer> numbers = new ArrayList<>();
+        for (int i = 1; i <= 1000000; i++) {
+            numbers.add(i);
+        }
+
+        int expected = 1000000;
+        int actual = arraysAndLists.findMaxValue(numbers);
+
+        Assert.assertEquals("1000000 is the maximum value in this test list", expected, actual);
+    }
+
+    /** removeElementsTests **/
+
+    @Test
+    void removeElements_when_element_is_null() {
+        // given
+        Integer element = null;
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i<10; i++) {
+            list.add(Integer.valueOf(i));
+        }
+
+        // when
+        List<Integer> actual = arraysAndLists.removeElements(list,element);
+
+        // then
+        Assert.assertEquals("Element was null, so the returned list should be the same that was put in", list, actual);
+    }
+    @Test
+    void removeElements_when_list_is_null() {
+        // given
+        Integer element = Integer.valueOf(1);
+        List<Integer> list = null;
+
+        // when
+        List<Integer> actual = arraysAndLists.removeElements(list,element);
+
+        // then
+        Assert.assertNull("Inputted list was null, so expected list should also be null", actual);
+    }
+
+    @Test
+    void removeElements_when_list_is_empty() {
+        // given
+        Integer element = Integer.valueOf(0);
+        List<Integer> list = new ArrayList<>();
+
+        // when
+        List<Integer> actual = arraysAndLists.removeElements(list, element);
+
+        // then
+
+        Assert.assertTrue("An empty list was inputted, therefore an empty list should be returned",actual.isEmpty());
+    }
+
+    @Test
+    void removeElements_when_element_is_zero() {
+        // given
+        Integer element = Integer.valueOf(0);
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i<10; i++) {
+            list.add(Integer.valueOf(i));
+        }
+
+        // when
+
+        // then
+    }
+
+    @Test
+    void removeElements_when_element_not_found() {
+        // given
+        Integer element = Integer.valueOf(10);
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i<10; i++) {
+            list.add(Integer.valueOf(i));
+        }
+
+        // when
+
+        // then
+    }
+
+    @Test
+    void removeElements_when_element_found_twice() {
+        // given
+        Integer element = Integer.valueOf(5);
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i<10; i++) {
+            list.add(Integer.valueOf(i));
+        }
+        list.add(5);
+
+        // when
+
+        // then
+    }
+
+    @Test
+    void removeElements_when_element_is_negative() {
+        // given
+        Integer element = Integer.valueOf(-1);
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i>-10; i--) {
+            list.add(Integer.valueOf(i));
+        }
+
+        // when
+
+        // then
+    }
+
+    @Test
+    void removeElements_when_element_is_very_large() {
+        // given
+        Integer element = Integer.valueOf(Integer.MAX_VALUE);
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(Integer.MAX_VALUE);
+
+        // when
+
+        // then
+    }
+
+    @Test
+    void removeElements_when_element_is_very_small() {
+        // given
+        Integer element = Integer.valueOf(Integer.MIN_VALUE);
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(Integer.MIN_VALUE);
+        // when
+
+        // then
     }
 
     /** calculateArraySumTests **/
@@ -278,9 +490,9 @@ class ArraysAndListsTest {
     void testFindMaxValue() {
     }
 
-    /** removeElements tests **/
+    /** removeElement tests **/
     @Test
-    void removeElements() {
+    void removeElement() {
     }
 
     /** calculate list sum tests **/

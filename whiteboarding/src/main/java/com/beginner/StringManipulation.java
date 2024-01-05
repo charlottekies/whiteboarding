@@ -34,11 +34,14 @@ public class StringManipulation {
     }
 
 
-    // Valid Parentheses: Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+    // Valid Parentheses: Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid. An input string is considered valid if equal numbers of parens, braces, and brackets are present.
 
     /**
-     * Given a string containing parentheses ('(', ')', '{', '}', '[', ']'),
+     * Given a string containing parentheses ('(', ')'),
      * determine if the input string has valid opening and closing parentheses.
+     *
+     * Rule 1: Every opening bracket must have a corresponding closing bracket.
+     * For example, if you have an opening parenthesis '(', there must be a corresponding closing parenthesis ')'.
      *
      * @param s The input string containing parentheses.
      * @return True if the parentheses are valid, false otherwise.
@@ -48,18 +51,23 @@ public class StringManipulation {
         return false;
     }
 
-    // String to Integer (Atoi): Implementing atoi for basic string-to-integer conversion can be considered beginner-friendly.
+    // String to Integer (Atoi: ASCII to Integer).
 
     /**
      * Convert a string representation of an integer to an integer.
      *
-     * @param s The input string representing an integer.
+     * @param s The input ASCII string representing an integer.
      * @return The integer value.
+     *
+     * If s is the string "123", the function would convert it to the integer 123.
+     * If s is the string "-45", the function would convert it to the integer -45.
+     * If s is the string "0", the function would convert it to the integer 0.
+     *
+     * Invalid strings should return 0
      */
     public int stringToInteger(String s) {
         // TODO: Implement method stub
         return 0;
     }
-
 
 }

@@ -10,5 +10,7 @@ public class StringManipulation {
     // Reverse Words in a String: Given an input string, reverse the string word by word while maintaining the order of the words.
     // Longest Substring Without Repeating Characters: Find the length of the longest substring without repeating characters.
     // Count and Say: Generate the nth term of the count-and-say sequence.
+    // Valid Parentheses: See Beginner level problem, and add a check to see if the parentheses are properly nested.
+
 
 }
